@@ -78,7 +78,7 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'PythonAlan',  # Nombre de la base de datos
-        'USER': 'root',  # usuario de MySQL
+        'USER': 'PythonAlan',  # usuario de MySQL
         'PASSWORD': 'Latorreoscura19',  # contraseña de MySQL
         'HOST': 'PythonAlan.mysql.pythonanywhere-services.com', 
         'PORT': '3306',
