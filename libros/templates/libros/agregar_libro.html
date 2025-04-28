@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agregar Libro</title>
+</head>
+<body>
+    <h1>Agregar Libro por ISBN</h1>
+
+    <form method="POST">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Agregar</button>
+    </form>
+
+    {% if libro_info %}
+        {% if libro_info.error %}
+            <p>{{ libro_info.error }}</p>
+        {% else %}
+            <h2>Información del libro</h2>
+            <p><strong>Título:</strong> {{ libro_info.titulo }}</p>
+            <p><strong>Autor:</strong> {{ libro_info.autor }}</p>
+            <p><strong>Descripción:</strong> {{ libro_info.descripcion }}</p>
+            <p><strong>ISBN:</strong> {{ libro_info.isbn }}</p>
+        {% endif %}
+    {% endif %}
+</body>
+</html>
