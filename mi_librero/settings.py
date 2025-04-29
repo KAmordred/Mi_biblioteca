@@ -11,6 +11,10 @@ https://docs.djangoproject.com/en/5.1/ref/settings/
 """
 
 from pathlib import Path
+import os 
+
+
+# Resto de tu configuración...
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -77,9 +81,9 @@ WSGI_APPLICATION = 'mi_librero.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'PythonAlan',  # Nombre de la base de datos
+        'NAME': 'PythonAlan$libreria',  # Nombre de la base de datos
         'USER': 'PythonAlan',  # usuario de MySQL
-        'PASSWORD': 'Latorreoscura19',  # contraseña de MySQL
+        'PASSWORD': 'Alan4696',  # contraseña de MySQL
         'HOST': 'PythonAlan.mysql.pythonanywhere-services.com', 
         'PORT': '3306',
     }
@@ -121,6 +125,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/5.1/howto/static-files/
 
 STATIC_URL = 'static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/5.1/ref/settings/#default-auto-field
